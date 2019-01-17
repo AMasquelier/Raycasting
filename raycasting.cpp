@@ -27,12 +27,12 @@ void Ray::debug_display()
 	Draw::Circle(_cast, 1.5, 50, rgb_color(1, 0, 0));
 }
 
-int Ray::get_ID()
+unsigned int Ray::get_ID()
 {
 	return _ID;
 }
 
-void Ray::set_ID(int ID)
+void Ray::set_ID(unsigned int ID)
 {
 	_ID = ID;
 }
@@ -185,12 +185,12 @@ int RayCaster::cast(Ray ray, Vector * cast)
 	return ret;
 }
 
-int RayCaster::get_ID()
+unsigned int RayCaster::get_ID()
 {
 	return _ID;
 }
 
-void RayCaster::set_ID(int ID)
+void RayCaster::set_ID(unsigned int ID)
 {
 	_ID = ID;
 }
@@ -288,7 +288,6 @@ RayCaster * RayCasting::get_raycaster_ptr(unsigned int ID)
 {
 	for (int i = 0; i < _RC.size(); i++)
 	{
-		std::cout << _RC[i].get_ID() << "  " << ID << std::endl;
 		if (_RC[i].get_ID() == ID) return &_RC[i];
 	}
 	return nullptr;
