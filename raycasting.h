@@ -11,8 +11,8 @@ class Ray
 		void load(Vector p, float a);
 		void debug_display();
 
-		int get_ID();
-		void set_ID(int ID);
+		unsigned int get_ID();
+		void set_ID(unsigned int ID);
 		Vector get_src();
 		void set_src(Vector p);
 		void set_cast(Vector cast);
@@ -43,8 +43,8 @@ class RayCaster
 		Vector get_point(int i);
 		void set_point(int i, Vector p);
 		int cast(Ray ray, Vector *cast);
-		int get_ID();
-		void set_ID(int ID);
+		unsigned int get_ID();
+		void set_ID(unsigned int ID);
 		void set_opacity(bool opacity);
 		bool is_opaque();
 		bool is_touched();
